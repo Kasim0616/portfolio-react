@@ -2,6 +2,8 @@ import React from 'react'
 import Hero from '../components/Hero.jsx'
 
 export default function Home() {
+  const resumeUrl = `${import.meta.env.BASE_URL}CV.pdf`
+
   return (
     <>
       <Hero />
@@ -42,8 +44,14 @@ export default function Home() {
           </div>
           <div className="contact-actions">
             <a className="primary-btn" href="mailto:bkasimnihal@gmail.com">Email Me</a>
-            <a className="ghost-btn" href="/CV.pdf" target="_blank" rel="noopener noreferrer">
-              My Resume
+            <a
+              className="ghost-btn"
+              href={resumeUrl}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV
             </a>
           </div>
         </section>
@@ -51,4 +59,3 @@ export default function Home() {
     </>
   )
 }
-
